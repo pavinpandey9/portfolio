@@ -14,7 +14,7 @@ export default function Projects({theme}) {
       imgDark: portfolioDark,
       name: "Personal Portfolio",
       desc: "Portfolio website created using React.js and Tailwind CSS.",
-      demoUrl: "",
+      demoUrl: "https://pavinpandey9.github.io/portfolio",
       githubUrl: "https://github.com/pavinpandey9/portfolio",
       hasDarKMode: true,
     },
