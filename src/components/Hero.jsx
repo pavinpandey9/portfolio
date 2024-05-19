@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import CV from '../assets/document/CV.pdf';
+import CV from "../assets/document/CV.pdf";
 
 export default function Hero() {
   const [theme, setTheme] = useState(null);
@@ -19,17 +19,20 @@ export default function Hero() {
   }, [theme]);
 
   return (
-    <div className="container text-center gap-4">
+    <div className="container text-center gap-6">
       <h1>
         <span className="text-sm font-semibold">Hello, I'm</span>
         <br />
-        <span className="text-4xl font-bold">Pavin Pandey</span> <br />
-        <span>Frontend Developer - 3 yrs</span>
+        <span className="text-3xl md:text-4xl font-bold">
+          Pavin Pandey
+        </span>{" "}
+        <br />
+        <span className="text-sm">Frontend Developer - 3 yrs</span>
       </h1>
       <img
-        src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG-Image.png"
+        src="https://avatars.githubusercontent.com/u/81810380?s=400&u=bf3d5e1e7badd920e84b38710c555c150286fb83&v=4"
         alt="Profile"
-        className="animate-bounce duration-700 block w-60 h-60 object-cover	mx-auto"
+        className="animate-bounce duration-700 block w-52 h-52 object-cover	mx-auto rounded-full"
       />
       <a
         href={CV}

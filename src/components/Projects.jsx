@@ -14,22 +14,6 @@ export default function Projects() {
       demoUrl: "",
       githubUrl: "",
     },
-    {
-      id: 2,
-      img: "https://pbs.twimg.com/profile_images/1613939007380914177/FE1eIIDI_400x400.jpg",
-      name: "Slider",
-      desc: "Lorem ipsum dolor sit amet conse ctetur, adipisicing elit. Laudantium, amet.",
-      demoUrl: "",
-      githubUrl: "",
-    },
-    {
-      id: 3,
-      img: "https://pbs.twimg.com/profile_images/1613939007380914177/FE1eIIDI_400x400.jpg",
-      name: "Crud",
-      desc: "Lorem ipsum dolor sit amet conse ctetur, adipisicing elit. Laudantium, amet.",
-      demoUrl: "",
-      githubUrl: "",
-    },
   ];
 
   function checkDisabled() {
