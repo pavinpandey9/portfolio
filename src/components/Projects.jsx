@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import portfolio from "../assets/projects/portfolio.png";
+import portfolioDark from '../assets/projects/portfolio-dark.png';
 
-export default function Projects() {
+export default function Projects({theme}) {
   const [prevDisabled, setPrevDisabled] = useState(true);
   const [nextDisabled, setNextDisabled] = useState(false);
   const [count, setCount] = useState(0);
@@ -8,11 +10,13 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      img: "https://pbs.twimg.com/profile_images/1613939007380914177/FE1eIIDI_400x400.jpg",
-      name: "Portfolio",
-      desc: "Lorem ipsum dolor sit amet conse ctetur, adipisicing elit. Laudantium, amet.",
+      img: portfolio,
+      imgDark: portfolioDark,
+      name: "Personal Portfolio",
+      desc: "Portfolio website created using React.js and Tailwind CSS.",
       demoUrl: "",
-      githubUrl: "",
+      githubUrl: "https://github.com/pavinpandey9/portfolio",
+      hasDarKMode: true,
     },
   ];
 
@@ -47,13 +51,21 @@ export default function Projects() {
             >
               <img
                 className="w-full h-52 aspect-video object-cover"
-                src={project.img}
+                src={theme === 'dark' && project.hasDarKMode ? project.imgDark : project.img}
                 alt={project.name}
               />
-              <div className="flex flex-col gap-3 py-6 px-4">
-                <p className="text-xl font-semibold">{project.name}</p>
-                <p>{project.desc}</p>
+              <div className="overlay"></div>
+              <div className="py-6 px-4">
+                <p className="underline font-semibold mb-1">{project.name}</p>
+                <p className="text-sm mb-5">{project.desc}</p>
                 <div className="flex justify-between items-center">
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="fa-brands fa-github text-3xl"></i>
+                  </a>
                   <a
                     href={project.demoUrl}
                     target="_blank"
@@ -62,9 +74,6 @@ export default function Projects() {
                   bg-zinc-800 text-zinc-100 dark:bg-zinc-100 dark:text-zinc-800"
                   >
                     Demo
-                  </a>
-                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                    <i className="fa-brands fa-github text-3xl"></i>
                   </a>
                 </div>
               </div>

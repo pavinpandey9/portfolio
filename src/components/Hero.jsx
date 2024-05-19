@@ -1,23 +1,6 @@
-import { useEffect, useState } from "react";
 import CV from "../assets/document/CV.pdf";
 
-export default function Hero() {
-  const [theme, setTheme] = useState(null);
-
-  useEffect(() => {
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-  }, []);
-
-  useEffect(() => {
-    theme === "dark"
-      ? document.querySelector("body").classList.add("dark")
-      : document.querySelector("body").classList.remove("dark");
-  }, [theme]);
-
+export default function Hero({ theme, setTheme }) {
   return (
     <div className="container text-center gap-6">
       <h1>

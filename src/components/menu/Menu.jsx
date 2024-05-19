@@ -5,7 +5,7 @@ import Projects from "../Projects";
 import Contact from "../Contact";
 import MenuItem from "./MenuItem";
 
-export default function Menu() {
+export default function Menu({theme}) {
   const [about, setAbout] = useState(false);
   const [skills, setSkills] = useState(false);
   const [projects, setProjects] = useState(false);
@@ -43,7 +43,7 @@ export default function Menu() {
       isTextFirst: false,
       isOpen: projects,
       fn: () => setProjects(!projects),
-      component: <Projects />,
+      component: <Projects theme={theme}/>,
     },
     {
       id: 4,
